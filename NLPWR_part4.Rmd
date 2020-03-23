@@ -1,6 +1,6 @@
 ---
 title: "NLP with R - Part 4: practice LDA"
-author: "Sonia Mazzi - Data Science Campus - ONS"
+author: "Sonia Mazzi<br> [ONS Data Science Campus](https://datasciencecampus.ons.gov.uk)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
@@ -10,17 +10,16 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
-    number_sections: true 
+    number_sections: false 
     theme: cosmo
     df_print: paged
 ---
 
-<script>
-   $(document).ready(function() {
-     $head = $('#header');
-     $head.prepend('<img src=\"pics/dsclogo.png\" style=\"float: right;width: 150px;\"/>')
-   });
-</script>
+```{r, echo=FALSE}
+htmltools::img(src = knitr::image_uri("pics/dsclogo.png"),
+               alt = "logo", 
+               style = "position: absolute; width: 180px; top:70px; right:10px; padding: 10px")
+```
 
 
 
