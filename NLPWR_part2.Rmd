@@ -1,6 +1,6 @@
 ---
 title: "NLP with R - Part 2: sentiment analysis"
-author: "Sonia Mazzi - Data Science Campus - ONS"
+author: "Sonia Mazzi<br> [ONS Data Science Campus](https://datasciencecampus.ons.gov.uk)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
@@ -15,12 +15,11 @@ output:
     df_print: paged
 ---
 
-<script>
-   $(document).ready(function() {
-     $head = $('#header');
-     $head.prepend('<img src=\"pics/dsclogo.png\" style=\"float: right;width: 150px;\"/>')
-   });
-</script>
+```{r, echo=FALSE}
+htmltools::img(src = knitr::image_uri("pics/dsclogo.png"),
+               alt = "logo", 
+               style = "position: absolute; width: 180px; top:70px; right:10px; padding: 10px")
+```
 
 
 # Setting up
@@ -243,7 +242,7 @@ How many of those words are actually in the lexicons?
 Use  `inner_join()` between `prince_tidy` and `new_sentiments` and then group by lexicon. The NRC lexicon has 10 different categories, and a word may appear in more than one category: that is, words can be negative and sad. That means that you'll want to use n_distinct() in summarise() to get the distinct word count per lexicon.
 
 ```{r}
-sentiments_new <- read_csv("sentiments_new.csv")
+sentiments_new <- read_csv("data/sentiments_new.csv")
 ```
 
 
